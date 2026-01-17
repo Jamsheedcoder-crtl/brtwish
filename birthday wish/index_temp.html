@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="balloon balloon-1"></div>
+    <div class="balloon balloon-2"></div>
+    <div class="balloon balloon-3"></div>
+    <div class="balloon balloon-4"></div>
+    
+    <div class="gift-box gift-1"></div>
+    <div class="gift-box gift-2"></div>
+    
+    <div class="party-hat hat-1"></div>
+    <div class="party-hat hat-2"></div>
+    <div class="container">
+        <div class="form-section" id="formSection">
+            <h2 class="form-title">Create Birthday Wish</h2>
+            <form id="wishForm">
+                <div class="form-group">
+                    <label for="name">Birthday Person's Name:</label>
+                    <input type="text" id="name" required placeholder="Enter name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required placeholder="Enter age">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Personal Message:</label>
+                    <textarea id="message" rows="4" placeholder="Write your birthday message here..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Add Photo:</label>
+                    <input type="file" id="photo" accept="image/*" class="file-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="video">Add Video:</label>
+                    <input type="file" id="video" accept="video/*" class="file-input">
+                </div>
+                
+                <button type="submit" class="btn">Create Birthday Wish</button>
+            </form>
+        </div>
+        
+        <div class="wishes-section" id="wishesSection">
+            <h2 class="birthday-greeting">🎉 Happy Birthday! 🎉</h2>
+            <h1 class="birthday-name" id="displayedName"></h1>
+            <h1 class="birthday-age" id="displayedAge"></h1>
+            
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-top"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wishes-text" id="displayedMessage"></div>
+            
+            <div class="media-container" id="mediaContainer"></div>
+            
+            <button class="btn copy-link-btn" onclick="copyLink()">Copy Wish Link</button>
+            <button class="btn back-btn" onclick="goBack()">Create Another</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div class="confetti" style="left: 40%; top: 87%;"></div>
+    <div class="confetti" style="left: 51%; top: 80%;"></div>
+    <div class="confetti" style="left: 22%; top: 71%;"></div>
+    <div class="confetti" style="left: 65%; top: 32%;"></div>
+    <div class="confetti" style="left: 67%; top: 79%;"></div>
+    <div class="confetti" style="left: 8%; top: 44%;"></div>
+    <div class="confetti" style="left: 13%; top: 24%;"></div>
+    <div class="confetti" style="left: 24%; top: 61%;"></div>
+    <div class="confetti" style="left: 45%; top: 76%;"></div>
+    <div class="confetti" style="left: 86%; top: 45%;"></div>
+    <div class="confetti" style="left: 19%; top: 16%;"></div>
+    <div class="confetti" style="left: 3%; top: 83%;"></div>
+    <div class="confetti" style="left: 81%; top: 86%;"></div>
+    <div class="confetti" style="left: 93%; top: 16%;"></div>
+    <div class="confetti" style="left: 20%; top: 77%;"></div>
+    <div class="confetti" style="left: 55%; top: 99%;"></div>
+    <div class="confetti" style="left: 17%; top: 93%;"></div>
+    <div class="confetti" style="left: 40%; top: 68%;"></div>
+    <div class="confetti" style="left: 73%; top: 61%;"></div>
+    <div class="confetti" style="left: 51%; top: 9%;"></div>
+</body>
+</html>
+    <div class="confetti" style="left: 43%; top: 30%;"></div>
+    <div class="confetti" style="left: 63%; top: 87%;"></div>
+    <div class="confetti" style="left: 57%; top: 21%;"></div>
+    <div class="confetti" style="left: 26%; top: 26%;"></div>
+    <div class="confetti" style="left: 98%; top: 39%;"></div>
+    <div class="confetti" style="left: 74%; top: 16%;"></div>
+    <div class="confetti" style="left: 64%; top: 23%;"></div>
+    <div class="confetti" style="left: 32%; top: 33%;"></div>
+    <div class="confetti" style="left: 17%; top: 33%;"></div>
+    <div class="confetti" style="left: 67%; top: 56%;"></div>
+    <div class="confetti" style="left: 15%; top: 50%;"></div>
+    <div class="confetti" style="left: 98%; top: 18%;"></div>
+    <div class="confetti" style="left: 28%; top: 44%;"></div>
+    <div class="confetti" style="left: 13%; top: 94%;"></div>
+    <div class="confetti" style="left: 20%; top: 97%;"></div>
+    <div class="confetti" style="left: 42%; top: 33%;"></div>
+    <div class="confetti" style="left: 61%; top: 70%;"></div>
+    <div class="confetti" style="left: 49%; top: 8%;"></div>
+    <div class="confetti" style="left: 0%; top: 25%;"></div>

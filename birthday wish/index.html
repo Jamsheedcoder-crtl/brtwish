@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="balloon balloon-1"></div>
+    <div class="balloon balloon-2"></div>
+    <div class="balloon balloon-3"></div>
+    <div class="balloon balloon-4"></div>
+    
+    <div class="gift-box gift-1"></div>
+    <div class="gift-box gift-2"></div>
+    
+    <div class="party-hat hat-1"></div>
+    <div class="party-hat hat-2"></div>
+    <div class="container">
+        <div class="form-section" id="formSection">
+            <div class="decorative-images">
+                <div class="decorative-img">🎈</div>
+                <div class="decorative-img">🎁</div>
+                <div class="decorative-img">🎂</div>
+                <div class="decorative-img">🎉</div>
+                <div class="decorative-img">🎊</div>
+                <div class="decorative-img">🥳</div>
+            </div>
+            <h2 class="form-title">Create Wish</h2>
+            <form id="wishForm">
+                <div class="form-group">
+                    <label for="name">Birthday Person's Name:</label>
+                    <input type="text" id="name" required placeholder="Enter name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required placeholder="Enter age">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Personal Message:</label>
+                    <textarea id="message" rows="4" placeholder="Write your birthday message here..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Add Photo:</label>
+                    <input type="file" id="photo" accept="image/*" class="file-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="video">Add Video:</label>
+                    <input type="file" id="video" accept="video/*" class="file-input">
+                </div>
+                
+                <button type="submit" class="btn">Create Wish</button>
+            </form>
+        </div>
+        
+        <div class="wishes-section" id="wishesSection">
+            <h2 class="birthday-greeting">ðŸŽ‰ Happy Birthday! ðŸŽ‰</h2>
+            <h1 class="birthday-name" id="displayedName"></h1>
+            <h1 class="birthday-age" id="displayedAge"></h1>
+            
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-top"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wishes-text" id="displayedMessage"></div>
+            
+            <div class="media-container" id="mediaContainer"></div>
+            
+            <button class="btn copy-link-btn" onclick="copyLink()">Copy Wish Link</button>
+            <button class="btn back-btn" onclick="goBack()">Create Another</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Confetti Elements -->
+    <div class="confetti" style="left: 40%; top: 87%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 51%; top: 80%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 22%; top: 71%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 65%; top: 32%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 67%; top: 79%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 8%; top: 44%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 13%; top: 24%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 24%; top: 61%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 45%; top: 76%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 86%; top: 45%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 19%; top: 16%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 3%; top: 83%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 81%; top: 86%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 93%; top: 16%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 20%; top: 77%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 55%; top: 99%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 17%; top: 93%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 40%; top: 68%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 73%; top: 61%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 51%; top: 9%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 36%; top: 2%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 45%; top: 13%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 38%; top: 6%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 8%; top: 29%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 64%; top: 11%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 61%; top: 98%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 34%; top: 79%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 85%; top: 14%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 97%; top: 87%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 69%; top: 8%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 94%; top: 28%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 98%; top: 18%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 75%; top: 32%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 51%; top: 89%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 36%; top: 37%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 65%; top: 64%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 91%; top: 13%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 79%; top: 55%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 41%; top: 70%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 36%; top: 83%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 43%; top: 30%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 63%; top: 87%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 57%; top: 21%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 26%; top: 26%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 98%; top: 39%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 74%; top: 16%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 64%; top: 23%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 32%; top: 33%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 17%; top: 33%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 67%; top: 56%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 15%; top: 50%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 98%; top: 18%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 28%; top: 44%; background-color: #f00;"></div>
+    <div class="confetti" style="left: 13%; top: 94%; background-color: #0f0;"></div>
+    <div class="confetti" style="left: 20%; top: 97%; background-color: #00f;"></div>
+    <div class="confetti" style="left: 42%; top: 33%; background-color: #ff0;"></div>
+    <div class="confetti" style="left: 61%; top: 70%; background-color: #f0f;"></div>
+    <div class="confetti" style="left: 49%; top: 8%; background-color: #0ff;"></div>
+    <div class="confetti" style="left: 0%; top: 25%; background-color: #f00;"></div>
+      <!-- Watermark -->
+    <div class="watermark">created by jamsheed</div>
+</body>
+</html>
+
+

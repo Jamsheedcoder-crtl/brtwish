@@ -1,0 +1,19 @@
+{
+  "name": "birthday-wishes-generator",
+  "version": "1.0.0",
+  "description": "A user-friendly website for creating and sharing personalized birthday wishes with animations, photos, and videos",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "birthday",
+    "wishes",
+    "generator",
+    "animation",
+    "web-app"
+  ],
+  "author": "Birthday Wishes Generator",
+  "license": "MIT"
+}
